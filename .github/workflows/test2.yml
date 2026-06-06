@@ -1,1 +1,25 @@
 
+name: File operations on Github
+
+on: [ workflow_dispatch ]
+
+jobs:
+    file_operations:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: create a file
+              run: echo "Hi Praveen">f1.txt
+
+            - name: display the content of f1.txt
+              run: cat f1.txt
+
+            - name: display the date
+              run: date
+
+            - name: display the files and dirs
+              run: ls -lsrt
+
+            - name: display current location
+              run: pwd
+              
