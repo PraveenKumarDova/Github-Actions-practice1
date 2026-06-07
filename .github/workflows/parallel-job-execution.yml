@@ -1,0 +1,19 @@
+
+name: parallel job workflow
+
+on: [ workflow_dispatch ]
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Job1 step
+              run: echo "Job1 running"
+
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: job2 step
+              run: echo "Job2 running"
+
+              
