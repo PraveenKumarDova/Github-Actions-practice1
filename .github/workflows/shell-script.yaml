@@ -15,8 +15,11 @@ jobs:
             - name: display file content
               run: cat f1.txt
 
+            - name: giving execute permission
+              run: chmod +x uptime.sh
+
             - name: execute the shell script
               run: ./uptime.sh
 
-              
+
               
