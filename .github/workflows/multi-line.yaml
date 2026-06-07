@@ -16,5 +16,6 @@ jobs:
                ls -lrst
                cat f1.txt
                pwd
+               chmod +x uptime.sh
+               ./uptime.sh
 
-               
