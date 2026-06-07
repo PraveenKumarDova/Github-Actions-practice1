@@ -1,0 +1,26 @@
+
+name: checkout workflow
+
+on: [ workflow_dispatch ]
+
+jobs:
+
+    show-files:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: create a file
+              run: echo "Hi Praveen"> f1.txt
+
+            - name: checkout repo
+              uses: actions/checkout@v5
+
+            - name: display the content of the file
+              run: cat f1.txt
+
+            - name: display the files
+              run: ls -lrth
+
+              
+
+            
