@@ -1,0 +1,20 @@
+
+name: multi-line workflow
+
+on: [ workflow_dispatch ]
+
+jobs:
+    multiline_job:
+        runs-on: ubuntu-latest
+
+        steps: 
+            - name: checkout repo
+              uses: actions/checkout@v5
+
+            - name: show file content and dir
+              run: |
+               ls -lrst
+               cat f1.txt
+               pwd
+
+               
