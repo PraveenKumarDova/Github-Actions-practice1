@@ -1,0 +1,18 @@
+
+name: upload artifact workflow
+
+on: [ workflow_dispatch ]
+
+jobs:
+    upload:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Create a file
+              run: echo "Hi Praveen" > output.txt
+
+            - name: upload the file
+              uses: actions/upload-artifact@v5
+              with:
+                name: output file
+                path: upload.txt 
