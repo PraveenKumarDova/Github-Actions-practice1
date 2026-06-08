@@ -11,8 +11,11 @@ jobs:
             - name: Create a file
               run: echo "Hi Praveen" > output.txt
 
+            - name: display the file
+              run: ls -lsrt
+
             - name: upload the file
               uses: actions/upload-artifact@v5
               with:
                 name: output file
-                path: upload.txt 
+                path: output.txt 
