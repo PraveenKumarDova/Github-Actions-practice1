@@ -1,0 +1,42 @@
+
+name: Upload and download of artifact workflow
+
+on: [ workflow_dispatch ]
+
+jobs:
+    upload:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: create a file
+              run: echo "Hi Praveen God bless you"> file1.txt
+
+            - name: list the file
+              run: ls -lrth
+
+            - name: display the file content
+              run: cat file1.txt
+
+            - name: upload the file
+              uses: actions/upload-artifact@v5
+              with:
+                name: file1
+                path: file1.txt
+
+    download:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: download artifact file
+              uses: actions/download-artifact@v5
+              with:
+                name: file1
+                path: file1.txt 
+
+            - name: list the file
+              run: ls -lrth
+
+            - name: display the file content
+              run: cat file1.txt
+
+              
