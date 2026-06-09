@@ -1,0 +1,23 @@
+
+
+name: Workflow level envt variable workflow
+
+on: [ workflow_dispatch ]
+
+env:
+    BRAND: Praveen
+    PLATFORM: Github
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: step in job1
+              run: echo " Brand is $BRAND"
+
+
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: step in job2
+              run: echo " Plat form is $PLATFORM"
