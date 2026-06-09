@@ -1,0 +1,22 @@
+
+
+name: Job level envt variable workflow
+
+on: [ workflow_dispatch ]
+
+jobs:
+
+    demo:
+        runs-on: ubuntu-latest
+
+        env:
+            COMPANY: Praveen group of companies
+            COUNTRY: India
+
+        steps:
+            - name: step one
+              run: echo " Company name is $COMPANY"
+
+            - name: step two
+              run: echo " Country is $COUNTRY"
+              
